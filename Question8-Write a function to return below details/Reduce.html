@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+    <script>
+        const characters = [
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
+];
+
+
+// Get the total mass of all characters
+const totalmass = characters.reduce((x,y)=>{
+    return x+parseInt(y.mass);
+},0)
+console.log(totalmass); //output:346
+
+//Get the total height of all characters
+const totalheight = characters.reduce((x,y)=>{
+    return x+parseInt(y.height);
+},0);
+console.log(totalheight); //712
+
+//Get the total number of characters in all the character names
+const numberofchar = characters.reduce((result, char)=>{
+    if(typeof result[char.name]==="undefined"){
+        result[char.name]=1;
+    }
+    else{
+        result[char.name]+=1;
+    }
+    return result
+},{});
+console.log(numberofchar);
+
+//Get the total number of characters by eye color (hint. a map of eye color to count)
+const  noofeyecolor = characters.reduce((res, char)=>{
+    if(typeof res[char.eye_color]==="undefined"){
+        res[char.eye_color]=1;
+    }
+    else{
+        res[char.eye_color]+=1;
+    }
+    return res
+},{});
+console.log(noofeyecolor);
+
+
+    </script>
+</body>
+</html>

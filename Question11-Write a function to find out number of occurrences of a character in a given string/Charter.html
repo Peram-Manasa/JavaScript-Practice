@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         question:$Input: 'm', 'how many times does the character occur in this sentence?'
+// Output: 2
+
+// Input: 'h', 'how many times does the character occur in this sentence?'
+// Output: 4
+
+// Input: '?', 'how many times does the character occur in this sentence?'
+// Output: 1
+
+function Char(s,c){
+    let count=0;
+    for(let i=0; i<s.length; i++){
+        if(s.charAt(i)===c){
+            count+=1;
+        }
+    }
+    return count;
+}
+console.log(Char('how many times does the character occur in this sentence?', 'm'));
+console.log(Char('how many times does the character occur in this sentence?','h'));
+console.log(Char('how many times does the character occur in this sentence?', '?'));
+
+    </script>
+</body>
+</html>

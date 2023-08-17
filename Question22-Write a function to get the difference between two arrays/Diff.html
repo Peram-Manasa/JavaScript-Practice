@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diff</title>
+</head>
+<body>
+    <script>
+        let a= ['H','M'];
+        let b =['H','M','H@nsh', 'Manu'];
+        let diff = b.filter(x=>!a.includes(x));
+        console.log(diff);
+    </script>
+</body>
+</html>

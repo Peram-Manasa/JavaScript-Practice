@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal</title>
+</head>
+<body>
+    <script>
+        const pascal = (n) =>{
+            let last =[1];
+            traingle = [last];
+            for(let i=0; i<n; i++){
+                const ls = [0].concat(last);
+                rs= last.concat([0]);
+                last = rs.map((r, i)=> ls[i]+r);
+                traingle = traingle.concat([last])
+            }
+            return traingle;
+        }
+        console.log(pascal(5));
+    </script>
+</body>
+</html>

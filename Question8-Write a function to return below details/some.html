@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some</title>
+</head>
+<body>
+    <script>
+        const characters = [
+  {
+    name: "Luke Skywalker",
+    height: "172",
+    mass: "77",
+    eye_color: "blue",
+    gender: "male",
+  },
+  {
+    name: "Darth Vader",
+    height: "202",
+    mass: "136",
+    eye_color: "yellow",
+    gender: "male",
+  },
+  {
+    name: "Leia Organa",
+    height: "150",
+    mass: "49",
+    eye_color: "brown",
+    gender: "female",
+  },
+  {
+    name: "Anakin Skywalker",
+    height: "188",
+    mass: "84",
+    eye_color: "blue",
+    gender: "male",
+  },
+];
+
+//Is there at least one male character?
+const onemale = characters.some((s)=>{
+    return s.gender==="male"
+})
+console.log(onemale);
+
+//Is there at least one character with blue eyes?
+const oneblue = characters.some((x)=>{
+    return x.eye_color==="blue"
+})
+console.log(oneblue);
+
+//Is there at least one character taller than 200?
+const taller = characters.some((x)=>{
+    return x.height>200
+})
+console.log(taller);
+
+//Is there at least one character that has mass less than 50?
+
+const onemass = characters.some((x)=>{
+    return x.mass<50;
+})
+console.log(onemass);
+
+    </script>
+</body>
+</html>
+<!-- 
+output:
+true:45 line
+some.html:51 true
+some.html:57 true
+some.html:64 true -->

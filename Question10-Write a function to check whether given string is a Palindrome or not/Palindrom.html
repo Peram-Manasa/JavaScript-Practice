@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    question: 
+    Input: "aba"
+Output: "Palindrome"
+
+Input: "ABCDCBA"
+Output: "Palindrome"
+
+Input: "H@nsh"
+Output: "Not a Palindrome" -->
+    <script>
+        //Palindrome number
+const PP = (x)=>{
+    for(let i=0; i<x.length/2;i++){
+        if(x[i]!==x[x.length-1-i]){
+            return "Not a Palindrome"
+        }
+    }
+    return "Palindrome"
+}
+console.log(PP("aba"));
+console.log(PP("ABCDCBA"));
+console.log(PP("H@nsh"));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing numbers</title>
+</head>
+<body>
+    <script>
+        const fff = (arr) =>{
+            let missing = [];
+            const max= Math.max(...arr);
+            const min = Math.min(...arr);
+            for(let i=min; i<=max; i++){
+                if(!arr.includes(i)){
+                    missing.push(i);
+                }
+            }
+            return missing
+        }
+        console.log(fff([1,6]));
+    </script>
+</body>
+</html>l

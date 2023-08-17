@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SumPair</title>
+</head>
+<body>
+    <script>
+        const Sum = (s,t)=>{
+            for(let i=0; i<s.length;i++){
+                for(let j=i; j<s.length; j++){
+                    if(s[i]+s[j]===t){
+                        return (s[i]+","+s[j]);
+                    }
+                }
+            }
+        }
+        Sum([1,5,7,-1,5],6)
+    </script>
+</body>
+</html>

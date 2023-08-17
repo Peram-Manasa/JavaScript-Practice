@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate Values</title>
+</head>
+<body>
+    <script>
+        const str = " Hello Manasa , how are you in your life Manasa,Manasa please send me some details";
+
+        const word = (str) =>{
+            const strArr = str.split(" ");
+            const res = [];
+
+            for(let i=0; i<strArr.length; i++){
+                if(strArr.indexOf(strArr[i])== strArr.lastIndexOf(strArr[i])){
+                    if(!res.includes(strArr[i])){
+                        res.push(strArr[i]);
+                    }
+                }
+            }
+            return res.join(" ");
+        }
+        console.log(word(str));
+
+
+        //If i want single single letter 
+        const str1 = " big black bug bit a big black dog on his big black nose ";
+
+        const singe = (c)=>{
+            var u =' ';
+            for (const c of str1) {
+                if(u.includes(c)===false){
+                    u+=c;
+                }
+                
+            }
+            return u
+        }
+        console.log(singe(str1));
+
+    </script>
+</body>
+</html>

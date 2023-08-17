@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specific object</title>
+</head>
+<body>
+    <script>
+//         Input:
+// {
+//   user: {
+//       username: 'Navin Chauhan',
+//       password: 'Secret'
+//   },
+//   rapot: {
+//       title: 'Storage usage raport',
+//       goal: 'Remove unused data.'
+//   }
+// };
+
+// Key: 'user.username'
+
+// Output:
+
+const data = {
+  user: {
+      username: 'Navin Chauhan',
+      password: 'Secret'
+  },
+  rapot: {
+      title: 'Storage usage raport',
+      goal: 'Remove unused data.'
+  }
+ };
+
+ const path = "user.password"
+ const Specific = (obj, path)=>{
+  const parts = path.split(".");
+  for(let i=0; i<parts.length; i++){
+    const key = parts[i];
+    obj = obj[key];
+  }
+  return obj
+ }
+ console.log(Specific(data, path));
+    </script>
+</body>
+</html>
